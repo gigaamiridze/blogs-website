@@ -25,7 +25,7 @@ all_posts = [
     },
     {
         "slug": "programming-is-fun",
-        "image": "mountains.jpg",
+        "image": "coding.jpg",
         "author": "Maximilian",
         "date": date(2022, 3, 10),
         "title": "Programming Is Great!",
@@ -46,7 +46,7 @@ all_posts = [
     },
     {
         "slug": "into-the-woods",
-        "image": "mountains.jpg",
+        "image": "wood.jpg",
         "author": "Maximilian",
         "date": date(2020, 8, 5),
         "title": "Nature At Its Best",
