@@ -19,6 +19,7 @@ class Post(models.Model):
     image_name = models.CharField(max_length=50, null=False, blank=False)
     date = models.DateField(auto_now=True, null=False, blank=False)
     slug = models.SlugField(unique=True, db_index=True)
+    author = models.ForeignKey(Author, on_delete=models.SET_NULL, related_name='posts')
 
     def __str__(self):
         return self.title
