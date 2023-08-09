@@ -26,7 +26,7 @@ class Post(models.Model):
     date = models.DateField(auto_now=True, null=False, blank=False)
     slug = models.SlugField(unique=True, db_index=True)
     author = models.ForeignKey(Author, on_delete=models.SET_NULL, related_name='posts', null=True)
-    tag = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(Tag)
 
     def __str__(self):
         return self.title
