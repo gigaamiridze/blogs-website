@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from datetime import date
+from .models import Post
 
 all_posts = [
     {
@@ -71,8 +72,7 @@ def get_date(post):
     return post['date']
 
 def index(request):
-    sorted_posts = sorted(all_posts, key=get_date)
-    latest_posts = sorted_posts[-3:]
+    latest_posts = Post.objects.all().order_by('-date')[:3]
 
     context = {
         'posts': latest_posts,
